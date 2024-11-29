@@ -6,3 +6,4 @@ export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'perfil', component: PerfilComponent },
 ];
+ 
