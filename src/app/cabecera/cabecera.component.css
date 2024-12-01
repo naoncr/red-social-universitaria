@@ -1,0 +1,28 @@
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #4267b2;
+    color: white;
+  }
+  
+  .cabecera .logo h1 {
+    margin: 0;
+  }
+  
+  .cabecera .navegacion button {
+    margin-left: 10px;
+    padding: 8px 12px;
+    background-color: white;
+    color: #4267b2;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .cabecera .navegacion button:hover {
+    background-color: #365899;
+    color: white;
+  }
+  
