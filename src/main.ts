@@ -13,10 +13,6 @@ bootstrapApplication(AppComponent, {
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()), // Configuración correcta de Auth
     provideFirestore(() => getFirestore()),
-<<<<<<< HEAD
-    provideStorage(() => getStorage()), provideFirebaseApp(() => initializeApp({"projectId":"red-social-56a66","appId":"1:990540737115:web:8f89d3b1e815086fd92d7e","storageBucket":"red-social-56a66.firebasestorage.app","apiKey":"AIzaSyB7z0PZ6zcevqLfzQY_F2WzvaFiY_frVzU","authDomain":"red-social-56a66.firebaseapp.com","messagingSenderId":"990540737115"})), provideAuth(() => getAuth()), provideFirestore(() => getFirestore()),
-=======
-    provideStorage(() => getStorage()),
->>>>>>> d814ea4de28bf892f2a07a88b2bbc472dd03d3df
+
   ],
 });
