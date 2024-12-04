@@ -1,0 +1,59 @@
+.feed {
+    width: 70%;
+    margin: 20px auto;
+  }
+  
+  .crear-publicacion {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .crear-publicacion textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .crear-publicacion button {
+    padding: 10px;
+    background-color: #4267b2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .crear-publicacion button:hover {
+    background-color: #365899;
+  }
+  
+  .publicaciones .publicacion {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: white;
+  }
+  
+  .publicaciones .publicacion h3 {
+    margin: 0 0 10px;
+    color: #4267b2;
+  }
+  
+  .publicaciones .publicacion .acciones button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: #4267b2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .publicaciones .publicacion .acciones button:hover {
+    background-color: #365899;
+  }
+  

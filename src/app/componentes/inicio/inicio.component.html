@@ -1,0 +1,18 @@
+<div class="feed">
+    <div class="crear-publicacion">
+      <textarea placeholder="¿Qué estás pensando?"></textarea>
+      <button>Publicar</button>
+    </div>
+    <div class="publicaciones">
+      <div class="publicacion" *ngFor="let post of publicaciones">
+        <h3>{{ post.autor }}</h3>
+        <p>{{ post.contenido }}</p>
+        <img *ngIf="post.imagen" [src]="post.imagen" alt="Imagen publicación">
+        <div class="acciones">
+          <button>Me gusta</button>
+          <button>Comentar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,26 @@
+.barra-lateral {
+    width: 200px;
+    background-color: #4267b2;
+    color: white;
+    padding: 20px;
+  }
+  
+  .barra-lateral ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .barra-lateral ul li {
+    margin: 10px 0;
+  }
+  
+  .barra-lateral ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+  }
+  
+  .barra-lateral ul li a:hover {
+    color: #ddd;
+  }
+  
