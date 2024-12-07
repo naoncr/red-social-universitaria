@@ -1,5 +1,5 @@
 
 <app-cabecera   *ngIf="isUserLoggedIn" ></app-cabecera>
 
-<router-outlet />
+<router-outlet  *ngIf="isUserLoggedIn" />
 <app-login *ngIf="!isUserLoggedIn"> </app-login>
