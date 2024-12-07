@@ -1,0 +1,49 @@
+
+
+  <div *ngIf="isLoginState()" class="container">
+    <div class="form-box">
+      <h2>Iniciar sesión</h2>
+      <form action="#">
+        <div class="input-group">
+          <label for="email">Tu correo</label>
+          <input type="email" id="email" name="email" placeholder="name@company.com" required>
+        </div>
+        <div class="input-group">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password" placeholder="********" required>
+        </div>
+        <button type="button"  (click)="iniciarClick()" class="btn">Iniciar</button>
+      </form>
+      <p> ¿no tienes cueta?<a (click)="CreateAccountClick()" >   registrate aqui</a></p>
+    </div>
+  </div>
+
+  <div *ngIf="isRegisterState()" class="container">
+    <div class="form-box">
+      <h2>registrate</h2>
+      <form>
+        <div class="input-group">
+          <label for="email">Tu Nombre</label>
+          <input type="text" id="name" [(ngModel)]="name" name="name" placeholder="Nombre" required>
+        </div>
+        <div class="input-group">
+          <label for="email">Tu correo</label>
+          <input type="email" id="email" [(ngModel)]="email" name="email" placeholder="name@company.com" required>
+        </div>
+        <div class="input-group">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" [(ngModel)]="password" name="password" placeholder="********" required>
+        </div>
+        <div class="input-group">
+          <label for="confirmPassword">Confirma contraseña</label>
+          <input type="password" id="confirmPassword" [(ngModel)]="confirmPassword" name="confirmPassword" placeholder="********" required>
+        </div>
+        <button type="button" (click)="registrarClick()" class="btn">registrate</button>
+      </form>
+      <p>¿ya tienes cuenta?<a (click)="LoginClick()"> Inicia sesión aquí</a></p>
+    </div>
+    
+  </div>
+
+
+  
