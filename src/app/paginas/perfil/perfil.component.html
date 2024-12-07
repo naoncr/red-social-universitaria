@@ -6,7 +6,11 @@
         <img src="{{userData.fotoUrl}}" alt="Foto de perfil">
       </div>
       <div class="profile-info">
-        <h1 id="nombre">{{userData.nombre}} {{userData.apellido}}</h1>
+        <h1 id="nombre">{{userData.nombre}} {{userData.apellido}}  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#2196F3" width="15px" height="15px">
+          <path d="M0 0h24v24H0z" fill="none"/>
+          <path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm-1.44 14.66l6.72-6.72-1.41-1.41-5.31 5.31-2.12-2.12-1.41 1.41 3.53 3.53z"/>
+        </svg>
+        </h1>
         <p class="career">{{userData.carrera}} </p>
         <p class="privacy">Privacidad: {{userData.privacidad}} </p>
         <button class="edit-profile-btn">Editar perfil</button>

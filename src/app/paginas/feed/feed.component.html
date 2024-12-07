@@ -1,1 +1,56 @@
-<p>feed works!</p>
+
+
+  <!-- Contenedor principal -->
+  <div class="feed-container">
+    <!-- Sección para crear una publicación -->
+    <div (click)="crearPost()" class="create-post">
+      <div class="create-post-header">
+        <img src="https://via.placeholder.com/50" alt="Foto de perfil">
+        <input type="text" placeholder="¿Qué estás pensando?" />
+      </div>
+      <div class="create-post-footer">
+        
+        <button  (click)="crearPost()" >Publicar</button>
+      </div>
+    </div>
+
+    <!-- Publicaciones -->
+    <div class="post">
+      <div class="post-header">
+        <img src="https://via.placeholder.com/50" alt="Foto de perfil">
+        <div>
+          <h3>Juan Pérez</h3>
+          <p class="time">Hace 2 horas</p>
+        </div>
+      </div>
+      <div class="post-content">
+        <p>¡Hola, mundo! Este es mi primer post en esta red social.</p>
+        <img src="https://via.placeholder.com/500x300" alt="Imagen de la publicación">
+      </div>
+      <div class="post-footer">
+        <button>👍 Me gusta</button>
+        <button>💬 Comentar</button>
+        <button>🔗 Compartir</button>
+      </div>
+    </div>
+
+    <div class="post">
+      <div class="post-header">
+        <img src="https://via.placeholder.com/50" alt="Foto de perfil">
+        <div>
+          <h3>María López</h3>
+          <p class="time">Hace 5 horas</p>
+        </div>
+      </div>
+      <div class="post-content">
+        <p>Disfrutando de una tarde increíble en el parque 🌳.</p>
+        <img src="https://via.placeholder.com/500x300" alt="Imagen de la publicación">
+      </div>
+      <div class="post-footer">
+        <button>👍 Me gusta</button>
+        <button>💬 Comentar</button>
+        <button>🔗 Compartir</button>
+      </div>
+    </div>
+  </div>
+
