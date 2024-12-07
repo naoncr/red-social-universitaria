@@ -15,18 +15,27 @@ body {
 }
 
 .container {
-  margin-top: 150px;
+  
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
 }
 
+
 .form-box {
   background-color: #1c1e29;
   padding: 40px;
   border-radius: 10px;
   width: 300px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.form-box1 {
+  background-color: #1c1e29;
+  padding: 40px;
+  border-radius: 10px;
+  width: 500px;
   color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }

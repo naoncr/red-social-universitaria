@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { FirebaseTSApp } from 'firebasets/firebasetsApp/firebaseTSApp'
 import { FirebaseTSAuth } from 'firebasets/firebasetsAuth/firebaseTSAuth';
-import { FirebaseTSFirestore } from "firebasets/firebasetsFirestore/firebaseTSFirestore";
+import { FirebaseTSFirestore, Limit, OrderBy } from "firebasets/firebasetsFirestore/firebaseTSFirestore";
 import { environment } from '../../environment/environment prod';
 import { BehaviorSubject } from 'rxjs';
 
@@ -12,9 +12,13 @@ export class AuthService {
   auth: FirebaseTSAuth;
   firestore: FirebaseTSFirestore;
   userDocument: userDocument | null = null;
+  posts : PostData []=[];
   //userdata
   private userDataSubject = new BehaviorSubject<any>(null); // Aquí se almacenarán los datos del usuario
   userData$ = this.userDataSubject.asObservable(); // Observable que podrán suscribirse los componentes
+  //posts
+  private userDataSubject1 = new BehaviorSubject<any>(null); // Aquí se almacenarán los datos del usuario
+  userData1$ = this.userDataSubject1.asObservable(); // Observable que podrán suscribirse los componentes
   //esatdo de login
   isLoggedIn1: boolean = false;
   private userStatus = new BehaviorSubject<boolean>(false); // Estado inicial: no logueado
@@ -25,6 +29,7 @@ export class AuthService {
     FirebaseTSApp.init(environment.firebaseConfig);
     this.auth = new FirebaseTSAuth();
     this.firestore = new FirebaseTSFirestore();
+    this.getPosts()
 
     this.auth.listenToSignInStateChanges(
       user => {
@@ -79,6 +84,8 @@ export class AuthService {
         path: ["Posts"],
         data: {
           id : postID,
+          nombre: this.userDocument?.nombre + " "+ this.userDocument?.apellido , 
+          fotoUrl:this.userDocument?.fotoUrl,
           text:text,
           creatorId: this.auth.getAuth().currentUser?.uid,
           timestamp: FirebaseTSApp.getFirestoreTimestamp(),
@@ -86,7 +93,7 @@ export class AuthService {
         },
         onComplete: (docId) => {
          alert("Publicacion creada")
-         this.getPosts();
+//this.getPosts();
          
         }
 
@@ -103,6 +110,8 @@ export class AuthService {
           path: ["Posts", postID],
           data: {
             id:postID,
+            nombre: this.userDocument?.nombre + " "+ this.userDocument?.apellido , 
+            fotoUrl:this.userDocument?.fotoUrl,
             text: text,
             creatorId: this.auth.getAuth().currentUser?.uid,
             imageUrl:imagenUrl,
@@ -111,7 +120,7 @@ export class AuthService {
           },
           onComplete: (docId) => {
             alert("Publicacion creada")
-         this.getPosts();
+        // this.getPosts();
           }
 
         }
@@ -123,7 +132,27 @@ export class AuthService {
 
 
   getPosts(){
-
+    this.firestore.getCollection({
+      path: ["Posts"],
+      where: [
+        new OrderBy("timestamp", "desc"),
+        new Limit(20),
+      ],
+      onComplete: (result) => {
+        result.docs.forEach((doc) => {
+          let post = <PostData>doc.data();
+          post.id = doc.id; // Agrega el ID del documento al objeto `post`
+          this.posts.push(post); // Agrega el post con su ID al arreglo
+          //verificar post
+          this.userDataSubject1.next(this.posts); // Actualiza los datos del usuario
+          console.log("Post:", this.posts)
+          
+        });
+      },
+      onFail: (err) => {
+        console.error("Error al obtener los posts:", err);
+      },
+    });
   }
   registro(email: string, pass: string, nombre: string, apellido: string, carrera: string) {
 
@@ -231,4 +260,16 @@ export interface userDocument {
   privacidad: string;
   userId: string
 
+}
+
+export interface PostData {
+  text: string,
+  creatorId: string,
+  imageUrl?: string,
+  timestamp: any;
+  id?: string; 
+  likes: number;
+  nombre : string;
+  fotoUrl: string
+  
 }

@@ -5,8 +5,8 @@
     <!-- Sección para crear una publicación -->
     <div (click)="crearPost()" class="create-post">
       <div class="create-post-header">
-        <img src="https://via.placeholder.com/50" alt="Foto de perfil">
-        <input type="text" placeholder="¿Qué estás pensando?" />
+        <img src="https://devmiasx.com/uploads/67380645a9ac3_user.png" alt="Foto de perfil">
+        <input type="text" placeholder="¿Qué estás pensando?"  readonly/>
       </div>
       <div class="create-post-footer">
         
@@ -15,17 +15,18 @@
     </div>
 
     <!-- Publicaciones -->
-    <div class="post">
+    <div *ngFor="let p of userData" class="post">
+    
       <div class="post-header">
-        <img src="https://via.placeholder.com/50" alt="Foto de perfil">
+        <img src="{{p.fotoUrl}}" alt="Foto de perfil">
         <div>
-          <h3>Juan Pérez</h3>
+          <h3>{{p.nombre}}</h3>
           <p class="time">Hace 2 horas</p>
         </div>
       </div>
       <div class="post-content">
-        <p>¡Hola, mundo! Este es mi primer post en esta red social.</p>
-        <img src="https://via.placeholder.com/500x300" alt="Imagen de la publicación">
+        <p>{{p.text}}</p>
+        <img src="{{p.imageUrl}}" >
       </div>
       <div class="post-footer">
         <button>👍 Me gusta</button>
@@ -34,23 +35,6 @@
       </div>
     </div>
 
-    <div class="post">
-      <div class="post-header">
-        <img src="https://via.placeholder.com/50" alt="Foto de perfil">
-        <div>
-          <h3>María López</h3>
-          <p class="time">Hace 5 horas</p>
-        </div>
-      </div>
-      <div class="post-content">
-        <p>Disfrutando de una tarde increíble en el parque 🌳.</p>
-        <img src="https://via.placeholder.com/500x300" alt="Imagen de la publicación">
-      </div>
-      <div class="post-footer">
-        <button>👍 Me gusta</button>
-        <button>💬 Comentar</button>
-        <button>🔗 Compartir</button>
-      </div>
-    </div>
+    
   </div>
 
