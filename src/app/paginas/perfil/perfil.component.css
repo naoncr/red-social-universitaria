@@ -1,0 +1,136 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+  }
+  
+  /* Barra de navegación */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .navbar ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Contenedor del perfil */
+  .profile-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  
+  /* Encabezado del perfil */
+  .profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-picture img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+  }
+  
+  .profile-info {
+    margin-left: 20px;
+  }
+  
+  .profile-info h1 {
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  .profile-info .career {
+    font-size: 16px;
+    color: #777;
+    margin: 5px 0;
+  }
+  
+  .profile-info .privacy {
+    font-size: 14px;
+    color: #999;
+    margin: 5px 0;
+  }
+  
+  .edit-profile-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #3897f0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .edit-profile-btn:hover {
+    background-color: #287dc0;
+  }
+  
+  /* Tabs de navegación */
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+    font-size: 16px;
+    color: #555;
+    border-bottom: 2px solid transparent;
+  }
+  
+  .tab.active {
+    color: #000;
+    border-bottom: 2px solid #3897f0;
+  }
+  
+  .tab:hover {
+    color: #000;
+  }
+  
+  /* Grid de publicaciones */
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  .post img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+  
