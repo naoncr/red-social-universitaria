@@ -1,1 +1,62 @@
-<p>evento works!</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Universitarios</title>
+    
+</head>
+<body>
+    <header class="header">
+        <h1>Eventos Universitarios</h1>
+        <p>¡Mantente al día con los próximos eventos académicos y culturales de tu universidad!</p>
+    </header>
+
+    <main class="main-content">
+        <section class="filtros">
+            <h2>Filtrar eventos</h2>
+            <form class="form-filtros">
+                <label for="tipo-evento">Tipo de evento:</label>
+                <select id="tipo-evento" name="tipo-evento">
+                    <option value="academico">Académico</option>
+                    <option value="cultural">Cultural</option>
+                    <option value="deportivo">Deportivo</option>
+                    <option value="otros">Otros</option>
+                </select>
+
+                <label for="fecha-evento">Fecha:</label>
+                <input type="date" id="fecha-evento" name="fecha-evento">
+
+                <button type="submit">Buscar</button>
+            </form>
+        </section>
+
+        <section class="eventos">
+            <article class="evento">
+                <h2 class="titulo-evento">Conferencia: Innovación Tecnológica</h2>
+                <p class="descripcion">Explora cómo la tecnología está transformando el futuro. Invitados especiales compartirán sus experiencias y conocimientos.</p>
+                <p class="fecha">Fecha: 12 de diciembre de 2024</p>
+                <p class="ubicacion">Lugar: Auditorio principal</p>
+            </article>
+
+            <article class="evento">
+                <h2 class="titulo-evento">Feria de Proyectos Universitarios</h2>
+                <p class="descripcion">Un espacio para que estudiantes presenten sus proyectos más destacados. ¡No te lo pierdas!</p>
+                <p class="fecha">Fecha: 15 de diciembre de 2024</p>
+                <p class="ubicacion">Lugar: Patio central</p>
+            </article>
+
+            <article class="evento">
+                <h2 class="titulo-evento">Festival Cultural Universitario</h2>
+                <p class="descripcion">Disfruta de música, danza, teatro y más en este evento lleno de arte y cultura.</p>
+                <p class="fecha">Fecha: 20 de diciembre de 2024</p>
+                <p class="ubicacion">Lugar: Plaza principal</p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Red Universitaria - Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

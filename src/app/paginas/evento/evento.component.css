@@ -1,0 +1,109 @@
+/* Estilo general */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #f5f7fa, #c3d6e8);
+    color: #333;
+}
+
+/* Encabezado */
+.header {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(90deg, #0078d7, #00c6fb);
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+.header p {
+    font-size: 1.2rem;
+}
+
+/* Contenido principal */
+.main-content {
+    padding: 2rem;
+}
+
+/* Sección de filtros */
+.filtros {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+.filtros h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+.form-filtros label {
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+.form-filtros select, .form-filtros input {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+.form-filtros button {
+    padding: 0.5rem 1rem;
+    background: #0078d7;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.form-filtros button:hover {
+    background: #005bb5;
+}
+
+/* Sección de eventos */
+.eventos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+.evento {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.evento:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+.titulo-evento {
+    font-size: 1.5rem;
+    color: #0078d7;
+    margin-bottom: 0.5rem;
+}
+.descripcion {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+.fecha, .ubicacion {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+/* Pie de página */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background: #0078d7;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

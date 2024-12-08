@@ -1,0 +1,114 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #fdfbfb, #ebedee);
+    color: #333;
+}
+
+.header {
+    text-align: center;
+    background: #4caf50;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.header p {
+    font-size: 1.2em;
+    margin: 5px 0 0;
+}
+
+.main-content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grupos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.grupo {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grupo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.titulo-grupo {
+    margin: 0;
+    color: #4caf50;
+    font-size: 1.5em;
+}
+
+.descripcion {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.acciones {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn.unirse {
+    background-color: #4caf50;
+    color: white;
+}
+
+.btn.unirse:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.btn.comentar {
+    background-color: #2196f3;
+    color: white;
+}
+
+.btn.comentar:hover {
+    background-color: #1e88e5;
+    transform: scale(1.05);
+}
+
+.btn.me-gusta {
+    background-color: #ff9800;
+    color: white;
+}
+
+.btn.me-gusta:hover {
+    background-color: #fb8c00;
+    transform: scale(1.05);
+}
+
+.footer {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 10px 0;
+    margin-top: 20px;
+}
